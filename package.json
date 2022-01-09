@@ -5,22 +5,24 @@
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
   "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --write \"src/**/*.ts\" \"src/**/*.js\"",
+    "build": "tsc --project tsconfig.build.json",
+    "test": "jest --config jest.config.ts",
+    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "tslint -p tsconfig.json",
-    "prepare" : "npm run build",
-    "prepublishOnly" : "npm run lint",
-    "preversion" : "npm run lint",
-    "version" : "npm run format && git add -A src",
-    "postversion" : "git push && git push --tags"
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run lint",
+    "preversion": "npm run lint",
+    "version": "npm run format && git add -A src",
+    "postversion": "git push && git push --tags"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ger88555/impresiones.git"
   },
   "keywords": [
-    "school-assignment", "printing", "email"
+    "school-assignment",
+    "printing",
+    "email"
   ],
   "author": "Germán Adolfo Celaya Gamboa",
   "license": "MIT",
@@ -29,10 +31,25 @@
   },
   "homepage": "https://github.com/ger88555/impresiones#readme",
   "devDependencies": {
+    "@types/get-stream": "^3.0.2",
+    "@types/html-pdf": "^3.0.0",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "get-stream": "^6.0.1",
+    "jest": "^27.4.6",
+    "jest-pdf-snapshot": "^0.5.4",
     "prettier": "^2.5.1",
+    "reflect-metadata": "^0.1.13",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
     "tslint": "^6.1.3",
     "tslint-config-prettier": "^1.18.0",
     "typescript": "^4.5.4"
   },
-  "files": ["lib/**/*"]
+  "files": [
+    "lib/**/*"
+  ],
+  "dependencies": {
+    "html-pdf": "^3.0.1"
+  }
 }
