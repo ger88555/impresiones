@@ -1,8 +1,8 @@
 import { ReadStream } from 'fs';
 import { create, CreateOptions } from 'html-pdf';
-import { ITranslator } from './ITranslator';
+import ITranslator from './ITranslator';
 
-export class FromHTML implements ITranslator {
+class FromHTML implements ITranslator {
   protected _html: string;
 
   protected _vars: object;
@@ -60,3 +60,5 @@ export class FromHTML implements ITranslator {
 
   protected getReplaceRegexp = (name: string) => new RegExp(`{{\\s*${name}\\s*}}`, 'g');
 }
+
+export default FromHTML

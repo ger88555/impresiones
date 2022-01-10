@@ -1,2 +1,2 @@
-export * from './ITranslator';
-export * from './FromHTML';
+export {default as ITranslator} from './ITranslator';
+export {default as FromHTML } from './FromHTML';

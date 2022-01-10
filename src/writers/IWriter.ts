@@ -1,6 +1,8 @@
 import { ReadStream } from "fs";
 
-export interface IWriter {
+interface IWriter {
   setInput(value: ReadStream): IWriter;
   write(): Promise<void>;
 }
+
+export default IWriter

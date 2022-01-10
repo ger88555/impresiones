@@ -1,7 +1,7 @@
 import { PathLike, createWriteStream, ReadStream } from 'fs';
-import { IWriter } from './IWriter';
+import IWriter from './IWriter';
 
-export class ToFile implements IWriter {
+class ToFile implements IWriter {
   protected _stream: ReadStream;
 
   protected _file: PathLike;
@@ -34,3 +34,5 @@ export class ToFile implements IWriter {
     // });
   }
 }
+
+export default ToFile
