@@ -3,7 +3,7 @@ import { FromHTML } from './translators';
 import { IWriter, ToFile } from './writers';
 import * as templates from './templates';
 
-class ServiceSingleton {
+export class ServiceSingleton {
     protected static instance: ServiceSingleton;
 
     /**
@@ -99,4 +99,4 @@ class ServiceSingleton {
     }
 }
 
-export default ServiceSingleton
+export default ServiceSingleton.getInstance
