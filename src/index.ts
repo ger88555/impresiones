@@ -1,6 +1,8 @@
-const Service = require('./service');
+import Service from './service';
+
+export * from './translators/ITranslator';
+export * from './translators/FromHTML';
+export * from './writers/IWriter';
+export * from './writers/ToFile'
 
 export default Service.getInstance;
-
-export * as translators from './translators';
-export * as writers from './writers';

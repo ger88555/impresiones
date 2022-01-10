@@ -99,4 +99,4 @@ export class ServiceSingleton {
     }
 }
 
-export default ServiceSingleton.getInstance
+export default ServiceSingleton

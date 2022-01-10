@@ -1,2 +1,2 @@
-export {default as IWriter} from './IWriter';
-export {default as ToFile} from './ToFile';
+export * from './IWriter';
+export * from './ToFile';

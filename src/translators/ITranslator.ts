@@ -1,7 +1,5 @@
 import { ReadStream } from 'fs';
 
-interface ITranslator {
+export interface ITranslator {
   read(): Promise<ReadStream>;
 }
-
-export default ITranslator
